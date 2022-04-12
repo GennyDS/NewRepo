@@ -1,5 +1,5 @@
 ﻿using csharp_oop_shop_2;
-string risposta;
+/*string risposta;
 bool ciclo = true;
 while (true)
 {
@@ -24,5 +24,9 @@ while (true)
     {
         ciclo = false;
     }
-
 }
+*/
+
+Acqua miaBottiglia = new Acqua("acqua", "botiglietta d'acqua",1.0,1.5 ,"Sorgente di Patrella" ,7.2);
+
+miaBottiglia.StampaProdottoIntero();

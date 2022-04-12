@@ -6,13 +6,13 @@ using System.Threading.Tasks;
 
 namespace csharp_oop_shop_2
 {
-    internal class Prodotto
+    internal  class Prodotto
     {
-        private int Codice { get; }
-        private string nome;
-        private string descrizione;
-        private double prezzo;
-        private double iva;
+        protected private int Codice { get; }
+       protected  private string nome;
+        protected private string descrizione;
+        protected private double prezzo;
+        protected private double iva;
 
 
         public Prodotto(string nome, string descrizione, double prezzo) //Costruttore 1
@@ -54,7 +54,7 @@ namespace csharp_oop_shop_2
             return PrezzoIVA;
         }
 
-        public void StampaProdottoIntero()
+        public  virtual void StampaProdottoIntero()
         {
             Console.WriteLine("---------- PRODOTTO ----------");
             Console.WriteLine("CODE: " + CreaCodiceProdotto());
