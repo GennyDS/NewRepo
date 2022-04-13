@@ -25,7 +25,7 @@ namespace csharp_oop_shop_2
         }
 
 
-        protected private double LitriDaBere(double litriAssunti)
+        protected  void LitriDaBere(double litriAssunti)
         {
             double litriDopoBevuta = litriMax - litriAssunti;
 
@@ -44,11 +44,11 @@ namespace csharp_oop_shop_2
             }
             else
             {
-                Console.WriteLine("hai finito l'acqua");
+                Console.WriteLine("hai finito l'acqua"+litriDopoBevuta);
 
-                return litriDopoBevuta;
+               
             }
-            return litriDopoBevuta;
+            
         }
 
 
@@ -72,8 +72,8 @@ namespace csharp_oop_shop_2
 
             if (litri < 0)
             {
-                Console.WriteLine("Non posso riempire senza mettere l'acqua");
-                return;
+                throw new Exception("Non posso riempire senza mettere l'acqua");
+               
             }
 
             if (litriDaRipempire + this.litri > litriMax)
@@ -88,8 +88,9 @@ namespace csharp_oop_shop_2
             }
 
 
-            public void Svuota()
+           public void Svuota()
             {
+
                 
                 this.litri = 0;
                 Console.WriteLine("Hai svuotato la bottiglia");
@@ -106,7 +107,10 @@ namespace csharp_oop_shop_2
                 }
                 else 
                 {
-                    Console.WriteLine("non puoi convertire una quantità negativa di litri")
+
+
+                    throw new Exception("non puoi convertire una quantità negativa di litri" );
+                        
 
                 }
             }
