@@ -11,6 +11,7 @@ namespace csharp_oop_shop_2
         private const double litriMax = 1.5;
         private double ph;
         private string sorgente;
+        private const double gallone = 3.785;
 
 
 
@@ -65,7 +66,7 @@ namespace csharp_oop_shop_2
 
 
 
-        public double riempi(double litri)
+        public void riempi(double litri)
         {
             double bottigliaDopoRiempimento = litriMax + litri;
 
@@ -93,7 +94,19 @@ namespace csharp_oop_shop_2
             }
 
 
+            public double ConversioniGalloni(double litri)
+            {
 
+                if(litri==1)
+                {
+                    litri = gallone;
+
+                }
+                else if (litri<1)
+                {
+
+                }
+            }
 
 
 
